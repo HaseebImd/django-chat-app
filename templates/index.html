@@ -11,7 +11,11 @@
     <title>Hello, world!</title>
   </head>
   <body>
-    <textarea id="chat-log" name="chat-log" rows="10" cols="100"></textarea><br>
+    <textarea id="chat-log" name="chat-log" rows="10" cols="100">
+      {% for chat in chats %}
+        {{chat.content}}
+      {% endfor %}
+    </textarea><br>
     <input id="chat-message-input" type="text" name="chat-message-input" size="100"><br>
     <input id="chat-message-submit" type="button" value="Send">
 
